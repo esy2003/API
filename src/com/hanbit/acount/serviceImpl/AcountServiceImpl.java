@@ -70,30 +70,31 @@ public class AcountServiceImpl implements AcountService {
 			}
 		}
 	}
-	
 
 	@Override
 	public void deposit(AcountBean bean) {
 		for (int i=0;i<vec.size();i++) {
 			if (bean.getBankBookNo() == vec.get(i).getBankBookNo()) {
-				
 				vec.get(i).setMoney(vec.get(i).getMoney() + bean.getMoney());
 			}
-			
 		}
-		
 	}
 
 	@Override
 	public void withdraw(AcountBean bean) {
-		// 출금
-		
+		for (int i=0;i<vec.size();i++) {
+			if (bean.getBankBookNo() == vec.get(i).getBankBookNo()) {
+				vec.get(i).setMoney(vec.get(i).getMoney() - bean.getMoney());
+			}	
+		}
 	}
 
 	@Override
 	public void deleteBankBook(int bankBookNo) {
-		// 계좌 해지
-		
+		for (int i=0;i<vec.size();i++) {
+			if (bankBookNo == vec.get(i).getBankBookNo()) {
+				vec.remove(vec.get(i));
+			}
+		}
 	}
-
 }

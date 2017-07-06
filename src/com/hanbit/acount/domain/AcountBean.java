@@ -56,6 +56,6 @@ public class AcountBean {
 	
 	@Override
 	public String toString() {
-		return String.format(BANK_NAME + "감사합니다. " + "계좌정보[이름 : %s, 계좌번호 : %d, 잔액 : %d원, 현재날짜 : %s]", name, bankBookNo, money, tradeDate);
+		return String.format(BANK_NAME + "감사합니다. " + "계좌정보[이름 : %s, 계좌번호 : %d, 잔액 : %d원, 현재날짜 : %s]\n", name, bankBookNo, money, tradeDate);
 	}
 }
