@@ -10,7 +10,7 @@ public class AcountServiceImpl implements AcountService {
 	Vector<AcountBean> vec;
 	AcountBean bean;
 	public AcountServiceImpl() {
-		vec = new Vector<AcountBean>(10,10);
+		vec = new Vector<>(10,10);
 		bean = new AcountBean();
 	}
 	
